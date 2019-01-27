@@ -15,12 +15,12 @@ Para poder utilizar dicho bot es necesario tener :
   ```
   https://api.telegram.org/bot<TOKEN>/setWebhook?url=
   ``` 
-  en esta dirección tendremos que poner el token del bot y la dirección quedando de la siguiente forma :
+  en esta dirección tendremos que poner el token de nuestro bot y la dirección(donde se encuentra el request.php en nuestro dominio) quedando de la siguiente forma :
   ```
   https://api.telegram.org/bot123456789/setWebhook?url=https://www.miservidor.com/bot/request.php
   ```
   En 123456789 pondremos el token y en url nuestra dirección donde se encuentra el request.php
-* Una vez establecido el Webhook tendremos que editar en request.php la variable $botToken el token de nuestro bot.
+* Una vez establecido el Webhook tendremos que editar en request.php el contenido de la variable $botToken por el token de nuestro bot.
 * Para cualquier mejora, nueva implementación o modificación la tendreis que realizar dentro del Switch que es el encargado de interpretar los comandos.
   
 ### Configuración de function ConsultaServicios()
