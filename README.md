@@ -29,13 +29,12 @@ Para poder utilizar dicho bot es necesario tener :
   Este archivo recibe mediante parámetro un servicio e indica si está encendido o nó.
 * Es necesario dar a consulta.sh permisos especiales debido a que el usuario que ejecutará ese .sh será (www-data) y el script realiza consultas con el usuario root
   para solventar este inconveniente le daremos los siguientes permisos:
-  ```
+    ```
           chmod u+s consulta.sh
           ```
-          
-          ```
+ ```         
           chmod +x consulta.sh 
-          ```
+ ```
           
  (Todo los permisos se deben de dar con el usurio root)
           
