@@ -37,5 +37,5 @@ Para poder utilizar dicho bot es necesario tener :
           chmod +x consulta.sh 
  ```
           
- (Todo los permisos se deben de dar con el usurio root)
+ (Todo los permisos se deben de dar con el usurio root) para más información acerca del sistema de permisos [SUID](https://www.linuxnix.com/suid-set-suid-linuxunix/)
           
