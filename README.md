@@ -2,14 +2,14 @@
 
 MoliBot es un bot de Telegram que permite realizar varias funcionales de forma sencilla
 
-#Requisitos
+# Requisitos
 
 Para poder utilizar dicho bot es necesario tener :
  - Un servidor web y un dominio con SSL(es muy necesario sinó las conexiones mediante el weebhook no se realizarán)
  - Crear un bot previamente,para ello podemos seguir el siguiente tutorial: https://planetachatbot.com/c%C3%B3mo-crear-un-bot-para-telegram-y-darle-funcionalidad-c5c7ec833f49
    (¡¡ Posteriormente configuraremos el WebHook en el siguiente apartado !!)
    
-#Configuración de parámetros
+# Configuración de parámetros
 
 - Para configurar el WebHook(que es el que le indicará a telegram donde se encuentra almacenado nuestro request.php) iremos a un navegador de internet y introduciremos la siguiente dirección : 
   https://api.telegram.org/bot<TOKEN>/setWebhook?url=        <- en esta dirección tendremos que poner el token del bot y la dirección quedando de la siguiente forma :
@@ -17,7 +17,7 @@ Para poder utilizar dicho bot es necesario tener :
 - Una vez establecido el Webhook tendremos que editar en request.php la variable $botToken el token de nuestro bot.
 - Para cualquier mejora, nueva implementación o modificación la tendreis que realizar dentro del Switch que es el encargado de interpretar los comandos.
   
-#Configuración de function ConsultaServicios()
+# Configuración de function ConsultaServicios()
 
 - Como habeís podido ver esta función nos permite consultar estados de servicios que tenga nuestro servidor para ello usa el archivo consulta.sh(!!!Muy importante cambiar la ruta !!!)
   Este archivo recibe mediante parámetro un servicio e indica si está encendido o nó.
