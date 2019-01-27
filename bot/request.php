@@ -1,5 +1,5 @@
 <?php
- 
+#Token del bot 
 $botToken = "INTRODUCE_API_BOT";
  
 $website = "https://api.telegram.org/bot".$botToken;
