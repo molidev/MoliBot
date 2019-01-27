@@ -6,7 +6,7 @@ MoliBot es un bot de Telegram que permite realizar varias funcionales de forma s
 
 Para poder utilizar dicho bot es necesario tener :
  - Un servidor web y un dominio con SSL(es muy necesario sinó las conexiones mediante el weebhook no se realizarán)
- - Crear un bot previamente,para ello podemos seguir el siguiente tutorial: [Tutorial] (https://planetachatbot.com/c%C3%B3mo-crear-un-bot-para-telegram-y-darle-funcionalidad-c5c7ec833f49)
+ - Crear un bot previamente, para ello podemos seguir el siguiente tutorial: [Tutorial](https://planetachatbot.com/c%C3%B3mo-crear-un-bot-para-telegram-y-darle-funcionalidad-c5c7ec833f49)
    (¡¡ Posteriormente configuraremos el WebHook en el siguiente apartado !!)
    
 ### Configuración de parámetros
