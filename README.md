@@ -12,7 +12,7 @@ Para poder utilizar dicho bot es necesario tener :
 ### Configuración de parámetros
 
 * Para configurar el WebHook(que es el que le indicará a telegram donde se encuentra almacenado nuestro request.php) iremos a un navegador de internet y introduciremos la siguiente dirección :
-```
+  ```
   https://api.telegram.org/bot<TOKEN>/setWebhook?url=
   ``` 
   en esta dirección tendremos que poner el token del bot y la dirección quedando de la siguiente forma :
@@ -29,9 +29,10 @@ Para poder utilizar dicho bot es necesario tener :
   Este archivo recibe mediante parámetro un servicio e indica si está encendido o nó.
 * Es necesario dar a consulta.sh permisos especiales debido a que el usuario que ejecutará ese .sh será (www-data) y el script realiza consultas con el usuario root
   para solventar este inconveniente le daremos los siguientes permisos:
-    ```
+ ```
           chmod u+s consulta.sh
-          ```
+ ```
+ Y por el permiso de ejecución :
  ```         
           chmod +x consulta.sh 
  ```
