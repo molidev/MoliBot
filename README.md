@@ -39,3 +39,6 @@ Para poder utilizar dicho bot es necesario tener :
           
  (Todo los permisos se deben de dar con el usurio root) para más información acerca del sistema de permisos [SUID](https://www.linuxnix.com/suid-set-suid-linuxunix/)
           
+### Agradecimientos
+
+* @eikelur por la detección de un error en consulta.sh en la versión 1.0
