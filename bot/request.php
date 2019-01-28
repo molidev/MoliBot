@@ -46,16 +46,15 @@ switch ($command) {
         break;
 }
 
+//Función encargada de llamar al archivo consulta.sh y mostrar la información devuelta
 function consultaServicios($chatId){
     $response = " 🔸 Estado de los Servicios 🔸 ";
     sendMessage($chatId, $response);
-    $estado1 = shell_exec('/home/Scripts/consulta.sh apache2');
-    $estado2 = shell_exec('/home/Scripts/consulta.sh bind9');
-    $estado3 = shell_exec('/home/Scripts/consulta.sh plexmediaServer');
-    $estados = '➡️'.' '.strtoupper($estado1).'➡️'.' '.strtoupper($estado2).'➡️'.' '.strtoupper($estado3);
-    sendMessage($chatId, $estados); 
+    $estado = shell_exec('/home/Scripts/consulta.sh');
+    sendMessage($chatId, $estado); 
  }
  
+//Función encargada de enviar un mensaje
 function sendMessage($chatId, $response, $keyboard = NULL){
     if (isset($keyboard)) {
         $teclado = '&reply_markup={"keyboard":['.$keyboard.'], "resize_keyboard":true, "one_time_keyboard":true}';

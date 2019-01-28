@@ -1,8 +1,15 @@
 #!/bin/bash
 
-if (( $(ps -ef | grep -v grep | grep $1 | wc -l) > 0 ))
-then
-echo "$1 ✅"
-else
-echo "$1 ❌"	
-fi
+#Indicamos los servicios que deseamos consultar
+declare -a servicios=("apache2" "plexmediaserver")
+
+#Recorremos los servicios declarados en el array
+for i in "${servicios[@]}"
+do
+   #Comprobamos si el servicio a consultar está activo o nó
+   if [[ $(systemctl is-active $i) == "active" ]]; then
+	echo "➡ ${i^^} ✅"
+   else
+    echo "➡ ${i^^} ❌"	
+   fi
+done
