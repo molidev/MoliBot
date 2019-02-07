@@ -2,11 +2,31 @@
 
 namespace Molinem\MoliBot;
 
+use Stringy\Stringy as S;
+use Exception;
+
+/**
+ * TODO
+ */
 class Message
 {
 
     public function __construct($data)
     {
+    }
+
+    public function sendMessage()
+    {
+    }
+
+    public static function buildFromRequest($jsonContent, $type = 'text')
+    {
+        $messageTypeClass = ucfirst($type) .'Message';
+        if (!class_exists($messageTypeClass)) {
+            throw new Exception('class '. $messageTypeClass .' does not exist');
+        }
+
+        return new $messageTypeClass($jsonContent);
     }
 
     public function getProperty($property, $defaultValue = null)

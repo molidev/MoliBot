@@ -4,8 +4,14 @@ namespace Molinem\MoliBot;
 
 final class CommandParser
 {
+    /**
+     * @var array
+     */
     private $commands;
 
+    /**
+     * Init the array of commands.
+     */
     public function __construct()
     {
         $this->commands = [];

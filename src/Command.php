@@ -4,9 +4,22 @@ namespace Molinem\MoliBot;
 
 class Command
 {
+    /**
+     * @var string
+     */
     private $pattern;
+
+    /**
+     * @var callable
+     */
     private $action;
 
+    /**
+     * Initializes the command.
+     *
+     * @param string $pattern The pattern (example: "/services")
+     * @param callable $action
+     */
     public function __construct(string $pattern, callable $action)
     {
         $this->pattern = $pattern;
