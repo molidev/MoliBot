@@ -1,44 +1,46 @@
 # MoliBot
 
-MoliBot es un bot de Telegram que permite realizar varias funcionales de forma sencilla
+MoliBot is a Telegram bot that allow make some functionalities in a simple way
 
-### Requisitos
+### Requirements
 
-Para poder utilizar dicho bot es necesario tener :
- - Un servidor web y un dominio con SSL(es muy necesario sinó las conexiones mediante el weebhook no se realizarán)
- - Crear un bot previamente, para ello podemos seguir el siguiente tutorial: [Tutorial](https://planetachatbot.com/c%C3%B3mo-crear-un-bot-para-telegram-y-darle-funcionalidad-c5c7ec833f49)
-   (¡¡ Posteriormente configuraremos el WebHook en el siguiente apartado !!)
+For use this but it's necessary has :
+ - One web server with SSL certificate and your own domain name (SSL certificate is very important because if you don´t have any certificate webhook doesn´t works)
+ - You need create one bot, If you haven´t got any bot -> use this easy tutorial: [Tutorial](https://planetachatbot.com/c%C3%B3mo-crear-un-bot-para-telegram-y-darle-funcionalidad-c5c7ec833f49)
+ * (WebHook will be configurated on the next step)
    
-### Configuración de parámetros
+### Installation Instructions   
+   
+### Configuration of parameters
 
-* Para configurar el WebHook(que es el que le indicará a telegram donde se encuentra almacenado nuestro request.php) iremos a un navegador de internet y introduciremos la siguiente dirección :
+* For configure WebHook(will indicate to Telegram where have located request.php) we will go to web browser and we will write this link :
   ```
   https://api.telegram.org/bot<TOKEN>/setWebhook?url=
   ``` 
-  en esta dirección tendremos que poner el token de nuestro bot y la dirección(donde se encuentra el request.php en nuestro dominio) quedando de la siguiente forma :
+  on this link we will have to put the token of the bot and path of request.php in our domain (this is a example) :
   ```
   https://api.telegram.org/bot123456789/setWebhook?url=https://www.miservidor.com/bot/request.php
   ```
-  En 123456789 pondremos el token y en url nuestra dirección donde se encuentra el request.php
-* Una vez establecido el Webhook tendremos que editar en request.php el contenido de la variable $botToken por el token de nuestro bot.
-* Para cualquier mejora, nueva implementación o modificación la tendreis que realizar dentro del Switch que es el encargado de interpretar los comandos.
+  On 123456789 we will need put the token and on url(https://www.miservidor.com/bot/request.php) we will add path of request.php
+* On the next step we will modify on request.php the content of variable $botToken and will put we our token.
+* For improve the code or implement new thing, for example add new command -> edit swich estructure on line 39 of request.php.
   
-### Configuración de function ConsultaServicios()
+### Configuration function ConsultaServicios()
 
-* Como habeís podido ver esta función nos permite consultar estados de servicios que tenga nuestro servidor para ello usa el archivo consulta.sh(!!!Muy importante cambiar la ruta !!!)
-  Este archivo recibe mediante parámetro un servicio e indica si está encendido o nó.
-* Es necesario dar a consulta.sh permisos especiales debido a que el usuario que ejecutará ese .sh será (www-data) y el script realiza consultas con el usuario root
-  para solventar este inconveniente le daremos los siguientes permisos:
+* This function will help us with checking state of service that has our server, use file -> consulta.sh (configure correctly the path)
+  consulta.sh receive by parameters one service and check if the service is working or not.
+* The file consulta.sh need special perms because the user that execute this .sh will be (www-data) and the script that performs queries is the user root( or other)
+  for resolve this problem we will need give some permissions:
  ```
           chmod u+s consulta.sh
  ```
- Y por el permiso de ejecución :
+ and the execution permission :
  ```         
           chmod +x consulta.sh 
  ```
           
- (Todo los permisos se deben de dar con el usuario root) para más información acerca del sistema de permisos [SUID](https://www.linuxnix.com/suid-set-suid-linuxunix/)
-          
-### Agradecimientos
-
-* @eikelur por la detección de un error en consulta.sh en la versión 1.0
+ (All perms it´s necessary give with the user root) for more information about perms system [SUID](https://www.linuxnix.com/suid-set-suid-linuxunix/)
+ 
+### Improvements
+* Readme -> English
+* Working with pull requests for improve code
